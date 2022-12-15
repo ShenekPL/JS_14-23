@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<style>
+		.text {
+		resize: none;
+		}
+		 </style>
+		<script type="text/javascript">
+		 function okno_zamknij() 
+		 {
+		 window.close()
+		 }
+		</script>
+	</head>
+	<body>
+		 <textarea class="text" name="wyjaśnienie" cols="100" rows="30" disabled>
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<script language="JavaScript">
+		function Obw_fre(b1_fre,b2_fre)
+		{
+		 B1_fre=parseFloat(b1_fre);
+		 B2_fre=parseFloat(b2_fre);
+		 wynik_obw_fre=2*B1_fre+2*B2_fre;
+		 document.getElementsByName('obw')[0].value=wynik_obw_fre.toFixed(2);
+		 alert("Obw="+wynik_obw_fre.toFixed(2)+"cm^2");
+		 pokaz1.innerHTML="Obw="+wynik_obw_fre.toFixed(2)+"cm^2"+"<br>";
+		}
+		function P_fre(b1,b2)
+		{
+		 B1_fre=parseFloat(b1);
+		 B2_fre=parseFloat(b2);
+		 wynik_p_fre=B1_fre*B2_fre;
+		 document.getElementsByName('pole')[0].value=wynik_p_fre.toFixed(2);
+		 alert("P="+wynik_p_fre.toFixed(2)+"cm");
+		 pokaz2.innerHTML="P="+wynik_p_fre.toFixed(2)+"cm";
+		}
+		 </script>
+	</head> 
+	<body> 
+		Obliczanie Obw i P prostokąta
+		<br> <br>
+		<form name="formularz" action="..." onsubmit="Obw_fre(this.bok1.value,this.bok2.value); 
+		P_fre(this.bok1.value,this.bok2.value);return false"> 
+		 Podaj b1=
+		 <input size="6" name="bok1">
+		 Podaj b2=
+		 <input size="6" name="bok2">
+		 <br> <br>
+		 <input TYPE="submit" Value="oblicz">
+		 <br> <br>
+		 Obwód=
+		 <input size="6" name="obw">
+		 Pole=
+		 <input size="6" name="pole">
+		</form>
+		<table>
+		 <tr id="pokaz1"></tr>
+		 <tr id="pokaz2"></tr>
+		</table>
+	</body> 
+</html>
+		 </textarea><br>
+		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<style>
+		.text {
+		resize: none;
+		}
+		 </style>
+		<script type="text/javascript">
+		 function okno_zamknij() 
+		 {
+		 window.close()
+		 }
+		</script>
+	</head>
+	<body>
+		 <textarea class="text" name="wyjaśnienie" cols="100" rows="30" disabled>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<script language="JavaScript">
+			function V_fre(r_fre,h_fre)
+			{
+			 R_fre=parseFloat(r_fre)
+			 H_fre=parseFloat(h_fre)
+			 wynik_V_fre=Math.PI*R_fre*R_fre*H_fre
+			 document.getElementsByName('obj')[0].value=wynik_V_fre.toFixed(2);
+			 alert("V="+wynik_V_fre.toFixed(2)+" cm^3");
+			 pokaz1.innerHTML="V="+wynik_V_fre.toFixed(2)+" cm^3"+"<br>"; 
+			}
+			
+			function Pc_fre(r_fre,h_fre)
+			{
+			 R_fre=parseFloat(r_fre);
+			 H_fre=parseFloat(h_fre);
+			 wynik_Pc_fre=2*Math.PI*R_fre*R_fre+2*Math.PI*R_fre*H_fre
+			 document.getElementsByName('pole')[0].value=wynik_Pc_fre.toFixed(2);
+			 alert("Pc="+wynik_Pc_fre.toFixed(2)+" cm^2");
+			 pokaz2.innerHTML="Pc="+wynik_Pc_fre.toFixed(2)+"cm^2";
+			}
+		</script>
+	</head> 
+	<body> 
+		Policzenie V i Pc walca
+		<br> <br>
+		<form name="formularz" action="..." onsubmit="V_fre(this.promien.value,this.wysokosc.value); 
+		Pc_fre(this.promien.value,this.wysokosc.value);return false"> 
+		 Podaj r:
+		 <input size="6" name="promien">
+		 Podaj h:
+		 <input size="6" name="wysokosc">
+		 <br> <br>
+		 <input TYPE="submit" Value="oblicz" >
+		 <br> <br>
+		 V:
+		 <input size="6" name="obj">
+		 Pc:
+		 <input size="6" name="pole">
+		</form>
+		<table>
+		 <tr id="pokaz1"></tr>
+		 <tr id="pokaz2"></tr>
+		</table>
+	</body> 
+</html>			
+		 </textarea><br>
+		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+	</body>
+</html>

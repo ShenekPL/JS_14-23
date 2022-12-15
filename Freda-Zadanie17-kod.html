@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<style>
+		.text {
+		resize: none;
+		}
+		 </style>
+		<script type="text/javascript">
+		 function okno_zamknij() 
+		 {
+		 window.close()
+		 }
+		</script>
+	</head>
+	<body>
+		 <textarea class="text" name="wyjaśnienie" cols="100" rows="30" disabled>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div style="color:navy;font-size:50px;">
+			<script language="JavaScript">
+				var A_fre = prompt("Podaj a: ","");
+				var B_fre = prompt("Podaj b: ","");
+				var a_fre=parseFloat(A_fre);
+				var b_fre=parseFloat(B_fre);
+				
+				function suma_fre(a_fre,b_fre) {
+					return a_fre + b_fre;
+				}
+				
+				function odejmowanie_fre(a_fre,b_fre) {
+					return a_fre - b_fre;
+				}
+				
+				function mnozenie_fre(a_fre,b_fre) {
+					return a_fre * b_fre;
+				}
+				
+				function kwadrat_fre(a_fre,b_fre) {
+					return Math.pow(a_fre,2);
+					return Math.pow(b_fre,2);
+				}
+				
+				function reszta_z_dzielenia_fre(a_fre,b_fre) {
+					return a_fre % b_fre;
+				}
+				
+				document.write("suma = "+suma_fre(a_fre,b_fre)+"<br>"+"odejmowanie = "+odejmowanie_fre(a_fre,b_fre)+"<br>"+"mnozenie = "+mnozenie_fre(a_fre,b_fre)+"<br>"+"kwadrat = "+kwadrat_fre(a_fre)+" i "+kwadrat_fre(b_fre)+"<br>"+"reszta z dzielenia = "+reszta_z_dzielenia_fre(a_fre,b_fre)+"<br>");
+			</script>
+		</div>
+	</body>
+</html>			
+		 </textarea><br>
+		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+	</body>
+</html>

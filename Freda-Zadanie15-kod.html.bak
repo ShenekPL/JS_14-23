@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<style>
+		.text {
+		resize: none;
+		}
+		 </style>
+		<script type="text/javascript">
+		 function okno_zamknij() 
+		 {
+		 window.close()
+		 }
+		</script>
+	</head>
+	<body>
+		 <textarea class="text" name="wyjaśnienie" cols="100" rows="30" disabled>
+<html> 
+	<head> 
+	</head>
+	<body style="color:blue;font-size:30px;background-color:grey;">
+		<script language="JavaScript">
+			var X1_fre=prompt("Podaj x1: ","");
+			var X2_fre=prompt("Podaj x2: ","");
+			var y1_fre;
+			var y2_fre;
+			var y3_fre;
+			var x1_Fre;
+			x1_fre=parseFloat(X1_fre);
+			x2_fre=parseFloat(X2_fre);
+			y1_fre = 3 * Math.pow(x1_fre,3 / 4);
+			y2_fre = 2 * Math.cos(x1_fre) + 3 * Math.sin(x1_fre);
+			y3_fre = Math.cbrt(Math.pow(x1_fre, 5) + 2 * Math.pow(x2_fre, 4) * Math.abs(x1_fre - x2_fre));
+			x1_Fre = (x1_fre*Math.PI)/180;
+			var a_fre = y1_fre.toFixed(2);
+			var b_fre = y2_fre.toFixed(2);
+			var c_fre = y3_fre.toFixed(2);
+			var d_fre = x1_Fre.toFixed(2);
+			document.write("x1 = "+x1_fre+" x2 = "+x2_fre+"<br> x1 = "+x1_fre+" x1 = "+d_fre+"<br> y1 = "+a_fre+"<br> y2 = "+b_fre+"<br> y3 = "+c_fre+"<br>");
+		</script>
+	</body> 
+</html>
+		 </textarea><br>
+		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+	</body>
+</html>

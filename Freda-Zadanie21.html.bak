@@ -1,0 +1,50 @@
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<script language="JavaScript">
+			function dlug_fre(d_fre,x_fre)
+			{
+			 D_fre=parseFloat(d_fre);
+			 X_fre=parseFloat(x_fre);
+			 dlug1_fre=Math.pow(D_fre,2) + Math.pow(X_fre,2);
+			 dlug2_fre=Math.sqrt(dlug1_fre);
+			 document.getElementsByName('drab')[0].value=dlug2_fre.toFixed(2);
+			 alert("Drabina="+dlug_fre2.toFixed(2));
+			 pokaz1.innerHTML="Drabina="+dlug2_fre.toFixed(2)+"<br>"; 
+			}
+			
+			function nach_fre(d_fre,x_fre)
+			{
+			 D_fre=parseFloat(d_fre);
+			 X_fre=parseFloat(x_fre);
+			 nach1_fre=Math.atan2(D_fre,X_fre);
+			 nach2_fre=180*nach1_fre/Math.PI;
+			 document.getElementsByName('alf')[0].value=nach2_fre.toFixed(2);
+			 alert("Alfa="+nach2_fre.toFixed(2));
+			 pokaz2.innerHTML="Alfa="+nach2_fre.toFixed(2)+"<br>"; 
+			}
+		 </script>
+		</head> 
+		<body> 
+			Obliczanie odległości od drabiny i kąta
+			<br> <br>
+			<form name="formularz" action="..." onsubmit="dlug_fre(this.d.value,this.x.value); 
+			nach_fre(this.d.value,this.x.value);return false"> 
+			 Podaj d:
+			 <input size="6" name="d">
+			 Podaj x:
+			 <input size="6" name="x">
+			 <br> <br>
+			 <input TYPE="submit" Value="oblicz" >
+			 <br> <br>
+			 Drabina:
+			 <input size="6" name="drab">
+			 Alfa:
+			 <input size="6" name="alf">
+			</form>
+			<table>
+			 <tr id="pokaz1"></tr>
+			 <tr id="pokaz2"></tr>
+			</table>
+	</body> 
+</html>
